@@ -1,0 +1,14 @@
+[
+    {
+        "description": "I went to the store today and this older lady complimented me on my perfume.",
+        "user_id": 1
+    },
+    {
+        "description": "My friend told me she doesn't like the anime I recommened to her",
+        "user_id": 2
+    },
+    {
+        "description": "My sister made me a cake for my birthday and it was really good",
+        "user_id": 3
+    }
+]

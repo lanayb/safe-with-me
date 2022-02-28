@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const sequelize = require('./config/connection');
-// const models = require('./models');
 const routes = require('./controllers');
 const exphbs = require('express-handlebars');
 

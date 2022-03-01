@@ -6,10 +6,12 @@ const password = document.querySelector('#password').value.trim();
 const age = document.querySelector('#age').value.trim();
 
 if( username && password && age ) {
-        const res = await fetch('api/signup/UserSignup', {
+        const res = await fetch('api/signup', {
         method: 'POST',
         body: JSON.stringify({
-            username, password, age
+            username, 
+            password, 
+            age
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -19,17 +21,21 @@ if( username && password && age ) {
     if(res.ok) {
         document.location.replace('/homepage');
     } else {
-        alert('failed to signup');
+        console.log('failed to signup');
     }
 }
 
 };
 
-document.querySelector('.signup-form')
-.addEventListener('submit', signupFormHandler);
+const submitBtn = document.getElementById('submit');
+submitBtn.addEventListener('click', signupFormHandler);
 
-const signupBtn = document.getElementById('signupBtn');
+// document
+// .getElementById('.signup-form')
+// .addEventListener('submit', signupFormHandler);
 
-signupBtn.onclick = () => {
-    console.log('yay, working!!!');
-};
+// const signupBtn = document.getElementById('signupBtn');
+
+// signupBtn.onclick = () => {
+//     console.log('yay, working!!!');
+// };

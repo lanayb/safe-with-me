@@ -23,14 +23,31 @@
       <h1>
         Safe With Me
       </h1>
-      <a class="navbar-brand" href="#">Login</a>
+
+      <div class="login">
+      {{#if loggedIn}}
+      <a class="navbar-brand" id="logoutBtn" href="#">Logout</a>
+      {{else}}
+      <a class="navbar-brand" id="loginBtn" href="/login">Login</a>
+      {{/if}}
+      </div>
+      
     </nav>
 
     </header>
+
+
       <main class="container container-fluid mt-5">
         {{{ body }}}
       </main>
+      
   </div>
+
+<script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
+<script src="/js/main.js"></script>
+
+  
   </body>
 
 </html>

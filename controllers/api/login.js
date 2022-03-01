@@ -14,26 +14,25 @@ router.get('/userLogin', async(req, res) => {
 // /api/login/userLogin
 router.post('/userLogin', async(req, res) => {
     try {
-        const userLogin = await User.create({
+        const userLogin = await User.findOne({
             where: {
-                user_name: req.body.user_name,
-                password: req.body.password,
+                user_name: "theking13",
+                // password: req.body.password,
             },
         });
+        let password = userLogin.password;
 
+        console.log(userLogin);
         if(!userLogin) {
             res.status(400).json({
                 message: 'Wrong email or password. Try again please!'
             });
-        }
-
-        const validPW = await userLogin.checkPassword(req.body.password);
-
-        if(!validPW) {
+        } else if (req.body.password !== password) {
             res.status(400).json({
                 message: 'Wrong email or password. Try again please!'
+                
             });
-        }
+        } else {
 
         req.session.save(() => {
             req.session.loggedIn = true;
@@ -43,7 +42,7 @@ router.post('/userLogin', async(req, res) => {
                 message: 'Nice, you are now logged in!'
             });
         });
-
+    }
     } catch(err) {
         res.status(400).json(err);
     }
@@ -62,4 +61,14 @@ router.post('/logout', (req, res) => {
     }
 });
 
+
 module.exports = router;
+
+
+        // const validPW = await userLogin.checkPassword(req.body.password);
+
+        // if(!validPW) {
+        //     res.status(400).json({
+        //         message: 'Wrong email or password. Try again please!'
+        //     });
+        // }

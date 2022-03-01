@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+
 // /api/login/userLogin
 router.get('/userLogin', async(req, res) => {
     try {

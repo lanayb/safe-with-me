@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Confession } = require("../models");
 const path = require('path');
+// const withAuth = require('../../utils/auth');
 
 
 // landing page

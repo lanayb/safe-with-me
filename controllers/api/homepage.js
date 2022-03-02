@@ -11,12 +11,12 @@ router.get('/entry', async(req, res) => {
     }
 });
 
-// /api/homepage/newEntry
-router.post('/newEntry', async(req, res) => {
+// /api/homepage/entry
+router.post('/entry', async(req, res) => {
     try {
         const newEntry = await Confession.create({
             description: req.body.description,
-            user_id: req.body.user_id,
+            // user_id: req.body.user_id,
         });
 
         req.session.save(() => {

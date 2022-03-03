@@ -27,7 +27,7 @@ if( username && password && age ) {
 
 };
 
-const submitBtn = document.getElementById('submit');
+const submitBtn = document.getElementById('signup-submit');
 submitBtn.addEventListener('click', signupFormHandler);
 
 // document

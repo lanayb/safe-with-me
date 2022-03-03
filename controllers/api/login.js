@@ -53,7 +53,7 @@ router.post('/userLogin', async(req, res) => {
 // logout route
 // api/login/logout
 router.post('/logout', (req, res) => {
-    if(req.sessiom.loggedIn) {
+    if(req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
         });
@@ -61,7 +61,6 @@ router.post('/logout', (req, res) => {
         res.status(404).end();
     }
 });
-
 
 module.exports = router;
 

@@ -1,8 +1,10 @@
 <div>
- <nav class="navbar">
-  
-     
+  {{!-- <header>
+     <nav class="navbar">
+       <a class="navbar-brand" id="loginBtn" href="/login">Logout</a>
     </nav>
+  </header> --}}
+
 
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -11,11 +13,14 @@
   </div>
 </div>
 
-  <div class="entry">
-    <input type="text" class="form-control form-control-lg" id="entry" placeholder="Don't be shy... enter here :)">
-      <button id="SubmitBtn" type="submit">submit</button>
+    <label for="entry"></label>
+    <input class="form-control form-control-lg" type="text"  id="entry" placeholder="Enter here.">
+    <input type="button" value="submit" id="subBtn">
+
+    <p class="output" id="userOutput"></p>
 
   </div>
 </div>
 
 </div>
+

@@ -1,6 +1,66 @@
-body{
+body {
     background-color: aliceblue;
     font-family: 'Itim', cursive;
     font-size: 30px;
 }
 
+.navbar {
+    margin: 20px;
+}
+
+#title {
+    text-decoration: none;
+    color: #5D8BF4;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: none;
+    color: #5D8BF4;
+}
+
+p {
+    text-align: center;
+    color: #5D8BF4;
+}
+
+#subBtn {
+    margin: 15px;
+    color: #5D8BF4;
+}
+
+#submit {
+    margin: 15px;
+}
+
+#signupBtn {
+    color: #5D8BF4;
+    text-decoration: none;
+}
+
+#signup-submit {
+    color: #5D8BF4;
+    margin: 20px;
+}
+
+#login-submit {
+    color: #5D8BF4;
+    margin: 20px;
+}
+
+#loginBtn {
+    color: #5D8BF4;
+    text-decoration: none;
+}
+
+.signup-form {
+    color: #5D8BF4;
+    margin: 20px;
+    line-height: 2.0;
+}
+
+.login-form {
+    color: #5D8BF4;
+    margin: 20px;
+    line-height: 2.0;
+}

@@ -1,7 +1,8 @@
 const entryFormHandler = async (event) => {
     event.preventDefault();
 
-const description = document.querySelector("#entry").value.trim();
+const description = document.querySelector('entry').value.trim();
+
 
 if(description) {
     const res = await fetch('/api/homepage/entry', {
@@ -23,6 +24,16 @@ if(description) {
 
 };
 
-const SubmitBtn = document.getElementById('SubmitBtn');
-SubmitBtn.addEventListener('click', entryFormHandler);
+const txt = document.getElementById('entry');
+const subBtn = document.getElementById('subBtn');
+const userOutput = document.getElementById('userOutput');
+
+function entry () {
+    userOutput.innerHTML = txt.value;
+}
+
+subBtn.addEventListener('click', entry);
+
+// const SubmitBtn = document.getElementById('SubmitBtn');
+// SubmitBtn.addEventListener('click', entryFormHandler);
 

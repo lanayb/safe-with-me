@@ -24,16 +24,10 @@ const loginFormHandler = async (event) => {
 
 };
 
-const submit = document.getElementById('submit');
-submit.addEventListener('click', loginFormHandler);
 
+const submit = document.getElementById('login-submit');
+submit.addEventListener('click', loginFormHandler);
 
 // document.querySelector('.login-form')
 // .addEventListener('submit', loginFormHandler);
 
-
-const loginBtn = document.getElementById('loginBtn');
-
-loginBtn.onclick = () => {
-    console.log('yay, login working!!!');
-};

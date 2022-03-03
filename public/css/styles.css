@@ -53,6 +53,10 @@ p {
     text-decoration: none;
 }
 
+#logout {
+    color: #5D8BF4;
+}
+
 .signup-form {
     color: #5D8BF4;
     margin: 20px;

@@ -39,7 +39,7 @@ router.get('/homepage', async(req,res) => {
         res.json(err);
     });
     const homepage = home.map((homepage) => homepage.get({ plain:true}));
-    res.render('homepage', {homepage});
+    res.render('homepage', {homepage, loggedIn: req.session.loggedIn});
 });
 
 

@@ -30,6 +30,7 @@ const userOutput = document.getElementById('userOutput');
 
 function entry () {
     userOutput.innerHTML = txt.value;
+    txt.value = '';
 }
 
 subBtn.addEventListener('click', entry);
